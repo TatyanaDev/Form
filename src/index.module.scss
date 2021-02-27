@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  background-color: #3ea9f5;
+  text-align: center;
+}
+
+.position {
+  position: relative;
+}
+.signup {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.77);
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: 'Gotham', sans-serif;
+  position: absolute;
+  top: 46px;
+  left:1200px
+}

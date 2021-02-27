@@ -1,0 +1,50 @@
+.input {
+  display: flex;
+  padding: 10px 5px;
+  border: 2px solid transparent;
+  background-color: white;
+  text-align: start;
+  padding: 21px 23px;
+  border-radius: 5px;
+  min-width: 555px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  outline: none;
+  font-family: sans-serif;
+  color: #9ca8b7;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.validInput {
+  border-color: green;
+}
+
+.errorInput {
+  border-color: red;
+}
+
+.error {
+  font-family: sans-serif;
+  position: absolute;
+  color: red;
+  border: 2px solid red;
+  background-color: white;
+  top: 78px;
+  right: -278px;
+  z-index: 2;
+  min-width: 555px;
+  border-radius: 5px;
+}
+
+.error::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent red transparent;
+  position:absolute;
+  top:-10px;
+}
