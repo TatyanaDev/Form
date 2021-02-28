@@ -4,21 +4,25 @@ import styles from './index.module.scss';
 import SignInPage from './pages/SignIn';
 
 const App = props => {
+  const ourURL = window.location.href;
   return (
     <>
       <BrowserRouter>
         <nav>
           <ul>
-            <li className={styles.position}>
-              <Link className={styles.signup} to='./'>
-                Login
-              </Link>
-            </li>
-            <li className={styles.position}>
-              <Link className={styles.signup} to='./sign-up'>
-                Signup
-              </Link>
-            </li>
+            {ourURL === 'http://localhost:3000/' ? (
+              <li className={styles.position}>
+                <Link className={styles.signup} to='./sign-up'>
+                  Signup
+                </Link>
+              </li>
+            ) : (
+              <li className={styles.position}>
+                <Link className={styles.signup} to='./'>
+                  Login
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
         <Switch>
