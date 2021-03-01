@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import styles from './index.module.scss';
 import SignInPage from './pages/SignIn';
+import SignUpPage from './pages/SignUp';
 
 class App extends Component {
   constructor (props) {
@@ -20,18 +21,18 @@ class App extends Component {
   }
 
   render () {
-    const ourURL = window.location.href;
+    const ourURL = window.location.pathname;
     return (
       <>
         <BrowserRouter>
           <nav>
             <ul>
-              {ourURL === 'http://localhost:3000/' ? (
+              {ourURL === '/' ? (
                 <li
                   onClick={this.handleLogoutClick}
                   className={styles.position}
                 >
-                  <Link className={styles.signup} to='./sign-up'>
+                  <Link className={styles.signup} to='/sign-up'>
                     Signup
                   </Link>
                 </li>
@@ -46,7 +47,7 @@ class App extends Component {
           </nav>
           <Switch>
             <Route exact path='/' component={SignInPage} />
-            <Route path='/sign-up' />
+            <Route path='/sign-up' component={SignUpPage}/>
           </Switch>
         </BrowserRouter>
       </>

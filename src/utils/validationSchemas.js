@@ -35,6 +35,15 @@ export const SIGN_IN_SCHEMA = Yup.object({
 export const SIGN_UP_SCHEMA = Yup.object({
   firstName: FIRST_SCHEMA,
   lastName: LAST_SCHEMA,
+  displayName: Yup.string()
+    .oneOf(
+      [Yup.ref('firstName')],
+      'The name that will be displayed on the site. Must match your name'
+    )
+    .required(),
   email: EMAIL_SCHEMA,
   password: PASSWORD_SCHEMA,
+  passwordConfirmation: Yup.string()
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required(),
 });

@@ -21,7 +21,7 @@ const SignInForm = props => {
           <Form>
             <Input name='email' placeholder='Email address' />
             <Input name='password' type='password' placeholder='Password' />
-            <Field name='submit' type='submit' value='LOGIN' className={styles.login}/>
+            <Field name='submit' type='submit' value='LOGIN' className={styles.login} />
           </Form>
         );
       }}
