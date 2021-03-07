@@ -4,6 +4,10 @@ import styles from './input.module.scss';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const Input = ({ name, placeholder, ...rest }) => {
+  const error = cn(styles.error, {
+    [styles.errorLogin]: window.location.pathname === '/',
+    [styles.errorSignUp]: window.location.pathname === '/sign-up',
+  });
   return (
     <label style={{ position: 'relative' }}>
       <Field name={name}>
@@ -24,12 +28,7 @@ const Input = ({ name, placeholder, ...rest }) => {
           );
         }}
       </Field>
-      <ErrorMessage
-        name={name}
-        component='span'
-        className={styles.error}
-        {...rest}
-      />
+      <ErrorMessage name={name} component='span' className={error} {...rest} />
     </label>
   );
 };

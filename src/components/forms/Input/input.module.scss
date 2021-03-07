@@ -1,5 +1,3 @@
-@import '../../../common/styles/templates';
-
 .input {
   border: 2px solid transparent;
   background-color: white;
@@ -41,10 +39,7 @@
   color: #86181d;
   border: 2px solid #f97583;
   background-color: #ffeef0;
-  top: 78px;
-  right: -22px;
   z-index: 2;
-  min-width: 300px;
   border-radius: 5px;
   padding: 4px 8px;
 }
@@ -58,4 +53,16 @@
   border-color: transparent transparent #f97583 transparent;
   position: absolute;
   top: -10px;
+}
+
+.errorLogin {
+  min-width: 300px;
+  top: 78px;
+  right: -22px;
+}
+
+.errorSignUp {
+  max-width: 260px;
+  top: 50px;
+  left: 14px;
 }
