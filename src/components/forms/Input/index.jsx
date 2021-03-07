@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import styles from './input.module.scss';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Field, ErrorMessage } from 'formik';
 
 const Input = ({ name, placeholder, ...rest }) => {
   const error = cn(styles.error, {
@@ -11,7 +11,7 @@ const Input = ({ name, placeholder, ...rest }) => {
   return (
     <label style={{ position: 'relative' }}>
       <Field name={name}>
-        {({ field, form, meta }) => {
+        {({ field, meta }) => {
           const classNames = cn(styles.input, {
             [styles.validInput]: meta.touched && !meta.error,
             [styles.errorInput]: meta.touched && meta.error,

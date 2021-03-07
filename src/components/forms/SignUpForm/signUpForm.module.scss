@@ -1,3 +1,5 @@
+@import '../../../common/styles/variables';
+
 .container {
   margin: 0 auto;
   max-width: 585px;
@@ -6,7 +8,7 @@
 .createAccount {
   min-width: 550px;
   min-height: 64px;
-  color: white;
+  color: $mainColor;
   background-color: #28d2d0;
   border: none;
   border-radius: 5px;

@@ -1,23 +1,15 @@
-import React, { Component } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
 import { SIGN_UP_SCHEMA } from '../../../utils/validationSchemas';
 import styles from './signUpForm.module.scss';
 import Input from '../../forms/Input';
 import RadioBtn from '../RadioBtn';
-
-const initialValues = {
-  firstName: '',
-  lastName: '',
-  displayName: '',
-  email: '',
-  password: '',
-  passwordConfirmation: '',
-};
+import { INITIAL_VALUES_SIGN_UP } from '../../../configs/index';
 
 const SignUpForm = props => {
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={INITIAL_VALUES_SIGN_UP}
       validationSchema={SIGN_UP_SCHEMA}
       onSubmit={props.onSubmit}
     >

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './signUp.module.scss';
 import Header from '../../components/forms/Header';
 import SignUpForm from '../../components/forms/SignUpForm';
-import RadioBtn from "../../components/forms/RadioBtn"
 
 const SignUpPage = props => {
   const onSubmit = values => {

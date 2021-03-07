@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Field, Form } from 'formik';
+import { Field } from 'formik';
 import styles from './radioBtn.module.scss';
 
 const RadioBtn = props => {

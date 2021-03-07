@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import cn from 'classnames';
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
 import { SIGN_IN_SCHEMA } from '../../../utils/validationSchemas';
 import styles from './signInForm.module.scss';
 import Input from '../../forms/Input';
-
-const initialValues = {
-  email: '',
-  password: '',
-};
+import { INITIAL_VALUES_SIGN_IN } from '../../../configs/index';
 
 const SignInForm = props => {
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={INITIAL_VALUES_SIGN_IN}
       validationSchema={SIGN_IN_SCHEMA}
       onSubmit={props.onSubmit}
     >
