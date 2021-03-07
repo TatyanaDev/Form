@@ -21,24 +21,23 @@ class App extends Component {
   }
 
   render () {
-    const ourURL = window.location.pathname;
     return (
       <>
         <BrowserRouter>
           <nav>
             <ul>
-              {ourURL === '/' ? (
+              {window.location.pathname === '/' ? (
                 <li
                   onClick={this.handleLogoutClick}
                   className={styles.position}
                 >
-                  <Link className={styles.signup} to='/sign-up'>
+                  <Link className={styles.sign} to='/sign-up'>
                     Signup
                   </Link>
                 </li>
               ) : (
                 <li onClick={this.handleLoginClick} className={styles.position}>
-                  <Link className={styles.signup} to='./'>
+                  <Link className={styles.sign} to='/'>
                     Login
                   </Link>
                 </li>
@@ -47,7 +46,7 @@ class App extends Component {
           </nav>
           <Switch>
             <Route exact path='/' component={SignInPage} />
-            <Route path='/sign-up' component={SignUpPage}/>
+            <Route path='/sign-up' component={SignUpPage} />
           </Switch>
         </BrowserRouter>
       </>

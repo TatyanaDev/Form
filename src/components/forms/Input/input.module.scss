@@ -1,23 +1,30 @@
 @import '../../../common/styles/templates';
 
 .input {
-  @extend %input;
+  border: 2px solid transparent;
+  background-color: white;
+  text-align: start;
+  padding: 21px 23px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  outline: none;
+  font-family: sans-serif;
+  color: #9ca8b7;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.inputLogin {
   display: flex;
-  // padding: 10px 5px;
-  // border: 2px solid transparent;
-  // background-color: white;
-  // text-align: start;
-  // padding: 21px 23px;
-  // border-radius: 5px;
   min-width: 555px;
-  // margin: 0 auto;
-  // margin-bottom: 12px;
-  // outline: none;
-  // font-family: sans-serif;
-  // color: #9ca8b7;
-  // letter-spacing: 1px;
-  // font-weight: 500;
-  // font-size: 18px;
+}
+
+.inputSignup {
+  margin-right: 14px;
+  margin-left: 14px;
+  max-width: 260.5px;
 }
 
 .validInput {

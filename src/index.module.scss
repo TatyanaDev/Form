@@ -7,7 +7,7 @@
 .position {
   position: relative;
 }
-.signup {
+.sign {
   text-decoration: none;
   color: white;
   padding: 10px 15px;
@@ -19,5 +19,9 @@
   font-family: 'Gotham', sans-serif;
   position: absolute;
   top: 46px;
-  left:1200px
+  left: 1200px;
+}
+
+.sign:focus {
+  outline: none;
 }

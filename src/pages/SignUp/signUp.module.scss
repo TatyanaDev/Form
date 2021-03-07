@@ -1,12 +1,25 @@
-.container{
+.container {
   max-width: 1170px;
-  margin:0 auto;
+  margin: 0 auto;
+  padding-bottom: 150px;
 }
 .heading {
   color: white;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 600;
   font-family: 'Gotham', sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+}
+
+.content {
+  font-family: 'Gotham', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  padding-bottom: 30px;
+  max-width: 450px;
+  margin: 0 auto;
 }

@@ -11,6 +11,8 @@ const Input = ({ name, placeholder, ...rest }) => {
           const classNames = cn(styles.input, {
             [styles.validInput]: meta.touched && !meta.error,
             [styles.errorInput]: meta.touched && meta.error,
+            [styles.inputLogin]: window.location.pathname === '/',
+            [styles.inputSignup]: window.location.pathname === '/sign-up',
           });
           return (
             <input

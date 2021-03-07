@@ -36,9 +36,9 @@ export const SIGN_UP_SCHEMA = Yup.object({
   firstName: FIRST_SCHEMA,
   lastName: LAST_SCHEMA,
   displayName: Yup.string()
-    .oneOf(
-      [Yup.ref('firstName')],
-      'The name that will be displayed on the site. Must match your name'
+    .matches(
+      /^[A-Z][a-z]{1,64}$/,
+      'Enter a name to display on the site. The first letter must be capitalized'
     )
     .required(),
   email: EMAIL_SCHEMA,

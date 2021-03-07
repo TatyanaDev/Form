@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './signIn.module.scss';
-import Header from '../Header';
+import Header from '../../components/forms/Header';
 import SignInForm from '../../components/forms/SignInForm';
 
 const SignInPage = props => {

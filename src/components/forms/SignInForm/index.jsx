@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import cn from 'classnames';
 import { SIGN_IN_SCHEMA } from '../../../utils/validationSchemas';
-import styles from "./signInForm.module.scss"
+import styles from './signInForm.module.scss';
 import Input from '../../forms/Input';
 
 const initialValues = {
@@ -21,7 +22,12 @@ const SignInForm = props => {
           <Form>
             <Input name='email' placeholder='Email address' />
             <Input name='password' type='password' placeholder='Password' />
-            <Field name='submit' type='submit' value='LOGIN' className={styles.login} />
+            <Field
+              name='submit'
+              type='submit'
+              value='LOGIN'
+              className={styles.login}
+            />
           </Form>
         );
       }}
