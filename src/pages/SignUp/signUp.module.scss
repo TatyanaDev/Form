@@ -1,6 +1,6 @@
-@import '../../common/styles/templates';
-@import '../../common/styles/variables';
-@import '../../common/styles/breakpoints';
+@import 'src/common/styles/templates';
+@import 'src/common/styles/variables';
+@import 'src/common/styles/breakpoints';
 
 .container {
   @extend %container;

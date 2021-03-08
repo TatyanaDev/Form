@@ -1,5 +1,5 @@
-@import '../../common/styles/templates';
-@import '../../common/styles/breakpoints';
+@import 'src/common/styles/templates';
+@import 'src/common/styles/breakpoints';
 
 .container {
   @extend %container;
