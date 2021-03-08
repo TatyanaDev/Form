@@ -1,4 +1,5 @@
 @import './common/styles/variables';
+@import './common/styles/breakpoints';
 
 * {
   box-sizing: border-box;
@@ -22,7 +23,10 @@
   font-family: $gotham;
   position: absolute;
   top: 46px;
-  left: 1200px;
+  left: 75%;
+  @media screen and (max-width: $sm) {
+    left: 65%;
+  }
 }
 
 .sign:focus {

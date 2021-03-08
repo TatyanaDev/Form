@@ -1,5 +1,6 @@
 @import '../../common/styles/templates';
 @import '../../common/styles/variables';
+@import '../../common/styles/breakpoints';
 
 .container {
   @extend %container;
@@ -9,6 +10,11 @@
   @extend %heading;
   margin-bottom: 15px;
   font-size: 40px;
+  @media screen and (max-width: $md) {
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .content {
@@ -21,4 +27,7 @@
   padding-bottom: 30px;
   max-width: 450px;
   margin: 0 auto;
+  @media screen and (max-width: $md) {
+    font-size: 15px;
+  }
 }

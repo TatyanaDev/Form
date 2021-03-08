@@ -1,4 +1,5 @@
 @import '../../../common/styles/variables';
+@import '../../../common/styles/breakpoints';
 
 .container {
   margin: 0 auto;
@@ -15,4 +16,7 @@
   font-weight: 500;
   font-size: 18px;
   margin-top: 20px;
+  @media screen and (max-width: $sm) {
+    min-width: 265px;
+  }
 }

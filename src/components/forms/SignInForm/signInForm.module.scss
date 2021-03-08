@@ -1,4 +1,5 @@
 @import '../../../common/styles/variables';
+@import '../../../common/styles/breakpoints';
 
 .login {
   min-width: 557px;
@@ -10,4 +11,10 @@
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
+  @media screen and (max-width: $md) {
+    min-width: 350px;
+  }
+  @media screen and (max-width: $sm) {
+    min-width: 270px;
+  }
 }

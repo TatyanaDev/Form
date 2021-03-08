@@ -1,4 +1,5 @@
 @import '../../../common/styles/variables';
+@import '../../../common/styles/breakpoints';
 
 .input {
   border: 2px solid transparent;
@@ -19,6 +20,12 @@
 .inputLogin {
   display: flex;
   min-width: 555px;
+  @media screen and (max-width: $md) {
+    min-width: 350px;
+  }
+  @media screen and (max-width: $sm) {
+    min-width: 200px;
+  }
 }
 
 .inputSignup {
@@ -59,6 +66,15 @@
   min-width: 300px;
   top: 78px;
   right: -22px;
+  @media screen and (max-width: $md) {
+    min-width: 200px;
+    top: 75px;
+    right: -25px;
+  }
+  @media screen and (max-width: $sm) {
+    top: 75px;
+    right: -65px;
+  }
 }
 
 .errorSignUp {
