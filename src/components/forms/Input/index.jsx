@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './input.module.scss';
 import { Field, ErrorMessage } from 'formik';
 
@@ -31,6 +32,15 @@ const Input = ({ name, placeholder, ...rest }) => {
       <ErrorMessage name={name} component='span' className={error} {...rest} />
     </label>
   );
+};
+
+Input.defaultProps = {
+  name: 'name',
+};
+
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default Input;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
+import PropTypes from 'prop-types';
 import { SIGN_UP_SCHEMA } from '../../../utils/validationSchemas';
 import styles from './signUpForm.module.scss';
 import Input from '../../forms/Input';
@@ -38,6 +39,10 @@ const SignUpForm = props => {
       }}
     </Formik>
   );
+};
+
+SignUpForm.propTypes = {
+  onSubmit: PropTypes.func,
 };
 
 export default SignUpForm;

@@ -10,8 +10,8 @@ const SignInPage = props => {
   return (
     <div className={styles.container}>
       <Header />
-        <h1 className={styles.heading}>LOGIN TO YOUR ACCOUNT</h1>
-        <SignInForm onSubmit={onSubmit} className={styles.error}/>
+      <h1 className={styles.heading}>LOGIN TO YOUR ACCOUNT</h1>
+      <SignInForm onSubmit={onSubmit} className={styles.error} />
     </div>
   );
 };

@@ -11,7 +11,9 @@ const SignUpPage = props => {
     <div className={styles.container}>
       <Header />
       <h1 className={styles.heading}>CREATE AN ACCOUNT</h1>
-      <p className={styles.content}>We always keep your name and email adress private.</p>
+      <p className={styles.content}>
+        We always keep your name and email adress private.
+      </p>
       <SignUpForm onSubmit={onSubmit} className={styles.error} />
     </div>
   );
