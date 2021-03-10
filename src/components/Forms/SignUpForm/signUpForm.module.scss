@@ -1,20 +1,28 @@
 @import 'src/common/styles/variables';
 @import 'src/common/styles/breakpoints';
 
-.login {
-  min-width: 557px;
+.container {
+  margin: 0 auto;
+  max-width: 585px;
+}
+
+.createAccount {
+  min-width: 550px;
   min-height: 64px;
   color: $mainColor;
   background-color: #28d2d0;
   border: none;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
-  text-transform: uppercase;
-  @media screen and (max-width: $md) {
-    min-width: 350px;
-  }
+  margin-top: 20px;
   @media screen and (max-width: $sm) {
-    min-width: 270px;
+    min-width: 265px;
   }
+}
+
+.inputSignup {
+  margin-right: 14px;
+  margin-left: 14px;
+  max-width: 260.5px;
 }

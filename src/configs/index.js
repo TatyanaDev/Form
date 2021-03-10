@@ -10,4 +10,5 @@ export const INITIAL_VALUES_SIGN_UP = {
   email: '',
   password: '',
   passwordConfirmation: '',
+  role: '',
 };

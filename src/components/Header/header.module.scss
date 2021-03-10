@@ -1,0 +1,34 @@
+@import 'src/common/styles/breakpoints';
+@import 'src/common/styles/variables';
+
+.header {
+  text-align: start;
+  padding: 50px 45px;
+  margin-bottom: 60px;
+  @media screen and (max-width: $sm) {
+    padding: 50px 20px;
+  }
+}
+
+.focus:focus,
+.sign:focus {
+  outline: none;
+}
+
+.sign {
+  text-decoration: none;
+  color: $mainColor;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.77);
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: $gotham;
+  position: absolute;
+  top: 46px;
+  left: 75%;
+  @media screen and (max-width: $sm) {
+    left: 65%;
+  }
+}

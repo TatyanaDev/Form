@@ -1,5 +1,6 @@
 @import 'src/common/styles/variables';
 @import 'src/common/styles/breakpoints';
+@import 'src/common/styles/templates';
 
 .input {
   border: 2px solid transparent;
@@ -11,27 +12,10 @@
   margin-bottom: 12px;
   outline: none;
   font-family: sans-serif;
-  color: #9ca8b7;
+  color: #000000;
   letter-spacing: 1px;
   font-weight: 500;
   font-size: 18px;
-}
-
-.inputLogin {
-  display: flex;
-  min-width: 555px;
-  @media screen and (max-width: $md) {
-    min-width: 350px;
-  }
-  @media screen and (max-width: $sm) {
-    min-width: 200px;
-  }
-}
-
-.inputSignup {
-  margin-right: 14px;
-  margin-left: 14px;
-  max-width: 260.5px;
 }
 
 .validInput {
@@ -43,23 +27,11 @@
 }
 
 .error {
-  font-family: sans-serif;
-  position: absolute;
-  color: #86181d;
-  border: 2px solid #f97583;
-  background-color: #ffeef0;
-  z-index: 2;
-  border-radius: 5px;
-  padding: 4px 8px;
+  @extend %error;
 }
 
 .error::before {
-  content: '';
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: transparent transparent #f97583 transparent;
-  position: absolute;
-  top: -10px;
+  @extend %error::before;
 }
 
 .errorLogin {

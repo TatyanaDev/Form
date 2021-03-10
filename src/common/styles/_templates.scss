@@ -11,3 +11,23 @@
   font-family: $gotham;
   text-transform: uppercase;
 }
+
+%error {
+  font-family: sans-serif;
+  position: absolute;
+  color: #86181d;
+  border: 2px solid #f97583;
+  background-color: #ffeef0;
+  z-index: 2;
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+
+%error::before {
+  content: '';
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #f97583 transparent;
+  position: absolute;
+  top: -10px;
+}

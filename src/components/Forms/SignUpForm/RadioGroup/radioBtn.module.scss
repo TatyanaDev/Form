@@ -1,5 +1,6 @@
 @import 'src/common/styles/variables';
 @import 'src/common/styles/breakpoints';
+@import 'src/common/styles/templates';
 
 .container {
   border: 1px solid $mainColor;
@@ -7,6 +8,7 @@
   margin-top: 25px;
   max-width: 550px;
   font-family: $gotham;
+  position: relative;
   @media screen and (max-width: $sm) {
     max-width: 260px;
   }
@@ -38,4 +40,16 @@
 .join,
 .info {
   text-align: start;
+}
+
+.error {
+  @extend %error;
+  @media screen and (max-width: $sm) {
+    top: 95px;
+  }
+  top: 70px;
+}
+
+.error::before {
+  @extend %error::before;
 }

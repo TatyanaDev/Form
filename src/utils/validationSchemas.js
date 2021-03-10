@@ -20,16 +20,14 @@ export const EMAIL_SCHEMA = Yup.string()
   )
   .required();
 
-export const PASSWORD_SCHEMA = Yup.string()
-  .matches(
-    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
-    'Please enter a valid password. Must contain an uppercase letter, a small letter, a special character and at least 8 characters'
-  )
-  .required();
-
 export const SIGN_IN_SCHEMA = Yup.object({
   email: EMAIL_SCHEMA,
-  password: PASSWORD_SCHEMA,
+  password: Yup.string()
+    .matches(
+      /^.{8,}$/,
+      'Please enter a valid password. Must be at least 8 characters long'
+    )
+    .required(),
 });
 
 export const SIGN_UP_SCHEMA = Yup.object({
@@ -42,8 +40,16 @@ export const SIGN_UP_SCHEMA = Yup.object({
     )
     .required(),
   email: EMAIL_SCHEMA,
-  password: PASSWORD_SCHEMA,
+  password: Yup.string()
+    .matches(
+      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
+      'Please enter a valid password. Must contain an uppercase letter, a small letter, a special character and at least 8 characters'
+    )
+    .required(),
   passwordConfirmation: Yup.string()
     .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required(),
+  role: Yup.string()
+    .oneOf(['buyer', 'creative'])
     .required(),
 });

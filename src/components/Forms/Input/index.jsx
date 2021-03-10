@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './input.module.scss';
 import { Field, ErrorMessage } from 'formik';
 
-const Input = ({ name, placeholder, ...rest }) => {
+const Input = ({ name, placeholder, inputClass, type, ...rest }) => {
   const error = cn(styles.error, {
     [styles.errorLogin]: window.location.pathname === '/',
     [styles.errorSignUp]: window.location.pathname === '/sign-up',
@@ -13,15 +13,13 @@ const Input = ({ name, placeholder, ...rest }) => {
     <label style={{ position: 'relative' }}>
       <Field name={name}>
         {({ field, meta }) => {
-          const classNames = cn(styles.input, {
+          const classNames = cn(styles.input, inputClass, {
             [styles.validInput]: meta.touched && !meta.error,
             [styles.errorInput]: meta.touched && meta.error,
-            [styles.inputLogin]: window.location.pathname === '/',
-            [styles.inputSignup]: window.location.pathname === '/sign-up',
           });
           return (
             <input
-              type='text'
+              type={type ? type : 'text'}
               className={classNames}
               placeholder={placeholder}
               {...field}

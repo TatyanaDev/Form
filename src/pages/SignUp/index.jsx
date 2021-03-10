@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './signUp.module.scss';
-import Header from '../../components/forms/Header';
-import SignUpForm from '../../components/forms/SignUpForm';
+import Header from 'components/Header';
+import SignUpForm from 'components/Forms/SignUpForm';
 
 const SignUpPage = props => {
   const onSubmit = values => {
@@ -14,7 +14,7 @@ const SignUpPage = props => {
       <p className={styles.content}>
         We always keep your name and email adress private.
       </p>
-      <SignUpForm onSubmit={onSubmit} className={styles.error} />
+      <SignUpForm onSubmit={onSubmit} />
     </div>
   );
 };
