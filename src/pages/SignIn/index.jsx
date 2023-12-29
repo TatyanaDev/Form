@@ -1,19 +1,13 @@
-import React from 'react';
-import styles from './signIn.module.scss';
-import Header from 'components/Header';
-import SignInForm from 'components/Forms/SignInForm';
+import SignInForm from "components/Forms/SignInForm";
+import Header from "components/Header";
+import style from "./signIn.module.scss";
 
-const SignInPage = props => {
-  const onSubmit = values => {
-    console.log(values);
-  };
-  return (
-    <div className={styles.container}>
-      <Header />
-      <h1 className={styles.heading}>LOGIN TO YOUR ACCOUNT</h1>
-      <SignInForm onSubmit={onSubmit} />
-    </div>
-  );
-};
+const SignIn = () => (
+  <div className={style.container}>
+    <Header />
+    <h1 className={style.heading}>Login to your account</h1>
+    <SignInForm />
+  </div>
+);
 
-export default SignInPage;
+export default SignIn;

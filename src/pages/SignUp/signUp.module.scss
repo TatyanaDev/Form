@@ -1,19 +1,23 @@
-@import 'src/common/styles/templates';
-@import 'src/common/styles/variables';
-@import 'src/common/styles/breakpoints';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/templates";
+@import "src/common/styles/variables";
 
 .container {
   @extend %container;
-  padding-bottom: 150px;
+
+  @media screen and (max-width: $sm) {
+    margin-bottom: 150px;
+  }
 }
+
 .heading {
   @extend %heading;
   margin-bottom: 15px;
-  font-size: 40px;
+  font-size: 35px;
+
   @media screen and (max-width: $md) {
+    margin: 0 20px 15px;
     font-size: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
   }
 }
 
@@ -24,9 +28,9 @@
   font-weight: 600;
   line-height: 27px;
   letter-spacing: 0.5px;
-  padding-bottom: 30px;
   max-width: 450px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+
   @media screen and (max-width: $md) {
     font-size: 15px;
   }

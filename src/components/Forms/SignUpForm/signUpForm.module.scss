@@ -1,28 +1,41 @@
-@import 'src/common/styles/variables';
-@import 'src/common/styles/breakpoints';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/variables";
 
-.container {
-  margin: 0 auto;
+.formContainer {
   max-width: 585px;
+  margin: 0 auto;
+
+  label:last-of-type {
+    .signUpInput {
+      margin-bottom: 25px;
+    }
+  }
+
+  div:first-of-type {
+    margin-bottom: 25px;
+  }
+
+  div:last-of-type {
+    margin-bottom: 15px;
+  }
 }
 
-.createAccount {
+.signUpInput {
+  margin: 0 14px 12px;
+  max-width: 260px;
+}
+
+.signUpBtn {
   min-width: 550px;
   min-height: 64px;
   color: $mainColor;
   background-color: #28d2d0;
   border: none;
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
-  margin-top: 20px;
-  @media screen and (max-width: $sm) {
-    min-width: 265px;
-  }
-}
 
-.inputSignup {
-  margin-right: 14px;
-  margin-left: 14px;
-  max-width: 260.5px;
+  @media screen and (max-width: $sm) {
+    min-width: 260px;
+  }
 }

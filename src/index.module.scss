@@ -1,5 +1,15 @@
 * {
   box-sizing: border-box;
+}
+
+body {
   background-color: #3ea9f5;
+  font-family: sans-serif;
   text-align: center;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("common/font/Gotham-Black.ttf") format("truetype");
+  font-style: normal;
 }

@@ -1,7 +1,20 @@
-@import 'src/common/styles/variables';
-@import 'src/common/styles/breakpoints';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/variables";
 
-.login {
+.signInInput {
+  display: flex;
+  min-width: 555px;
+
+  @media screen and (max-width: $md) {
+    min-width: 350px;
+  }
+
+  @media screen and (max-width: $sm) {
+    min-width: 200px;
+  }
+}
+
+.signInBtn {
   min-width: 557px;
   min-height: 64px;
   color: $mainColor;
@@ -11,21 +24,14 @@
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
-  @media screen and (max-width: $md) {
-    min-width: 350px;
-  }
-  @media screen and (max-width: $sm) {
-    min-width: 270px;
-  }
-}
+  display: inherit;
+  margin: 0 auto;
 
-.inputLogin {
-  display: flex;
-  min-width: 555px;
   @media screen and (max-width: $md) {
     min-width: 350px;
   }
+
   @media screen and (max-width: $sm) {
-    min-width: 200px;
+    min-width: 282px;
   }
 }

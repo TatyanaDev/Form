@@ -1,21 +1,24 @@
-@import 'src/common/styles/breakpoints';
-@import 'src/common/styles/variables';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/variables";
 
 .header {
-  text-align: start;
   padding: 50px 45px;
   margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   @media screen and (max-width: $sm) {
     padding: 50px 20px;
   }
 }
 
-.focus:focus,
-.sign:focus {
+.logoContainer:focus,
+.signBtn:focus {
   outline: none;
 }
 
-.sign {
+.signBtn {
   text-decoration: none;
   color: $mainColor;
   padding: 10px 15px;
@@ -25,10 +28,6 @@
   font-weight: 600;
   line-height: 22px;
   font-family: $gotham;
-  position: absolute;
-  top: 46px;
-  left: 75%;
-  @media screen and (max-width: $sm) {
-    left: 65%;
-  }
+  height: max-content;
+  display: block;
 }

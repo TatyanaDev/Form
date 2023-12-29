@@ -1,53 +1,46 @@
-@import 'src/common/styles/variables';
-@import 'src/common/styles/breakpoints';
-@import 'src/common/styles/templates';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/variables";
+@import "src/common/styles/templates";
 
 .container {
   border: 1px solid $mainColor;
   margin: 0 auto;
-  margin-top: 25px;
+  display: flex;
+  padding: 15px;
   max-width: 550px;
   font-family: $gotham;
   position: relative;
+
   @media screen and (max-width: $sm) {
     max-width: 260px;
+    min-height: 111px;
   }
 }
 
-.margin {
-  margin-top: 14px;
-  margin-left: 20px;
-}
-
-.join {
-  display: inline;
-  margin-left: 13px;
-  font-size: 20px;
-  font-weight: 400;
-  color: $mainColor;
-}
-
-.info {
-  padding-top: 5px;
-  margin-left: 45px;
-  color: $mainColor;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  margin-bottom: 14px;
-}
-
-.container,
-.join,
-.info {
+.roleContainer {
+  margin-left: 10px;
   text-align: start;
+  color: $mainColor;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.description {
+  font-size: 12px;
 }
 
 .error {
   @extend %error;
+  top: 75px;
+  left: -1px;
+
   @media screen and (max-width: $sm) {
-    top: 95px;
+    top: 120px;
   }
-  top: 70px;
 }
 
 .error::before {

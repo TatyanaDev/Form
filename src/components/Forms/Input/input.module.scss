@@ -1,6 +1,10 @@
-@import 'src/common/styles/variables';
-@import 'src/common/styles/breakpoints';
-@import 'src/common/styles/templates';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/variables";
+@import "src/common/styles/templates";
+
+.labelInput {
+  position: relative;
+}
 
 .input {
   border: 2px solid transparent;
@@ -11,7 +15,6 @@
   margin: 0 auto;
   margin-bottom: 12px;
   outline: none;
-  font-family: sans-serif;
   color: #000000;
   letter-spacing: 1px;
   font-weight: 500;
@@ -22,7 +25,7 @@
   border-color: green;
 }
 
-.errorInput {
+.invalidInput {
   border-color: red;
 }
 
@@ -34,23 +37,24 @@
   @extend %error::before;
 }
 
-.errorLogin {
-  min-width: 300px;
+.errorSignIn {
   top: 78px;
-  right: -22px;
+  left: -278px;
+
   @media screen and (max-width: $md) {
-    min-width: 200px;
+    max-width: 350px;
     top: 75px;
-    right: -25px;
+    left: -175px;
   }
+
   @media screen and (max-width: $sm) {
+    max-width: 282px;
     top: 75px;
-    right: -65px;
+    left: -141px;
   }
 }
 
 .errorSignUp {
-  max-width: 261px;
   top: 50px;
-  left: 14px;
+  left: 13px;
 }

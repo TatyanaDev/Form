@@ -1,82 +1,69 @@
-import React from 'react';
-import { Formik, Form, Field } from 'formik';
-import PropTypes from 'prop-types';
-import { SIGN_UP_SCHEMA } from 'utils/validationSchemas';
-import styles from './signUpForm.module.scss';
-import Input from 'components/Forms/Input';
-import RadioGroup from './RadioGroup';
-import { INITIAL_VALUES_SIGN_UP } from 'configs/index';
+import { Formik, Form, Field } from "formik";
+import { SIGN_UP_SCHEMA } from "utils/validation-schemes";
+import { INITIAL_VALUES_SIGN_UP } from "configs/index";
+import Input from "components/Forms/Input";
+import RadioGroup from "./RadioGroup";
+import style from "./signUpForm.module.scss";
 
-const SignUpForm = props => {
+const SignUpForm = () => {
+  const onSubmit = (values, { resetForm }) => {
+    console.log(values);
+    resetForm();
+  };
+
   return (
     <Formik
       initialValues={INITIAL_VALUES_SIGN_UP}
       validationSchema={SIGN_UP_SCHEMA}
-      onSubmit={props.onSubmit}
+      onSubmit={onSubmit}
     >
-      <Form className={styles.container}>
+      <Form className={style.formContainer}>
         <Input
-          name='firstName'
-          placeholder='First Name'
-          inputClass={styles.inputSignup}
-        />
-        <Input
-          name='lastName'
-          placeholder='Last Name'
-          inputClass={styles.inputSignup}
+          name="firstName"
+          placeholder="First name"
+          inputClass={style.signUpInput}
         />
         <Input
-          name='displayName'
-          placeholder='Display Name'
-          inputClass={styles.inputSignup}
+          name="lastName"
+          placeholder="Last name"
+          inputClass={style.signUpInput}
         />
         <Input
-          name='email'
-          placeholder='Email Address'
-          inputClass={styles.inputSignup}
+          name="displayName"
+          placeholder="Display name"
+          inputClass={style.signUpInput}
         />
         <Input
-          name='password'
-          type='password'
-          placeholder='Password'
-          inputClass={styles.inputSignup}
+          name="email"
+          placeholder="Email address"
+          inputClass={style.signUpInput}
         />
         <Input
-          name='passwordConfirmation'
-          type='password'
-          placeholder='Password Confirmation'
-          inputClass={styles.inputSignup}
+          name="password"
+          type="password"
+          placeholder="Password"
+          inputClass={style.signUpInput}
+          autoComplete="true"
         />
-        <RadioGroup
-          name='role'
-          values={[
-            {
-              value: 'buyer',
-              heading: 'Join As a Buyer',
-              description:
-                'I am looking for a Name, Logo or Tagline for my business, brand or product.',
-            },
-            {
-              value: 'creative',
-              heading: 'Join As a Creative or Marketplace Seller',
-              description:
-                'I plan to submit name ideas, Logo designs or sell names in Domain Marketplace.',
-            },
-          ]}
+        <Input
+          name="passwordConfirmation"
+          type="password"
+          placeholder="Password confirmation"
+          inputClass={style.signUpInput}
+          autoComplete="true"
         />
+
+        <RadioGroup />
+
         <Field
-          name='submit'
-          type='submit'
-          value='Create account'
-          className={styles.createAccount}
+          name="submit"
+          type="submit"
+          value="Create account"
+          className={style.signUpBtn}
         />
       </Form>
     </Formik>
   );
-};
-
-SignUpForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default SignUpForm;

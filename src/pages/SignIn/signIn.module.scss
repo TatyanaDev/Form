@@ -1,16 +1,17 @@
-@import 'src/common/styles/templates';
-@import 'src/common/styles/breakpoints';
+@import "src/common/styles/breakpoints";
+@import "src/common/styles/templates";
 
 .container {
   @extend %container;
 }
+
 .heading {
   @extend %heading;
   margin-bottom: 30px;
   font-size: 35px;
+
   @media screen and (max-width: $md) {
+    margin: 0 15px 30px;
     font-size: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
   }
 }

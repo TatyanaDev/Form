@@ -1,4 +1,4 @@
-@import 'src/common/styles/variables';
+@import "src/common/styles/variables";
 
 %container {
   max-width: 1170px;
@@ -21,13 +21,14 @@
   z-index: 2;
   border-radius: 5px;
   padding: 4px 8px;
-}
+  text-align: start;
 
-%error::before {
-  content: '';
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: transparent transparent #f97583 transparent;
-  position: absolute;
-  top: -10px;
+  &::before {
+    content: "";
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #f97583 transparent;
+    position: absolute;
+    top: -10px;
+  }
 }

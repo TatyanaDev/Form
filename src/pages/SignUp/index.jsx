@@ -1,22 +1,16 @@
-import React from 'react';
-import styles from './signUp.module.scss';
-import Header from 'components/Header';
-import SignUpForm from 'components/Forms/SignUpForm';
+import SignUpForm from "components/Forms/SignUpForm";
+import Header from "components/Header";
+import style from "./signUp.module.scss";
 
-const SignUpPage = props => {
-  const onSubmit = values => {
-    console.log(values);
-  };
-  return (
-    <div className={styles.container}>
-      <Header />
-      <h1 className={styles.heading}>CREATE AN ACCOUNT</h1>
-      <p className={styles.content}>
-        We always keep your name and email adress private.
-      </p>
-      <SignUpForm onSubmit={onSubmit} />
-    </div>
-  );
-};
+const SignUp = () => (
+  <div className={style.container}>
+    <Header />
+    <h2 className={style.heading}>Create an account</h2>
+    <p className={style.content}>
+      We always keep your name and email address private.
+    </p>
+    <SignUpForm />
+  </div>
+);
 
-export default SignUpPage;
+export default SignUp;

@@ -1,43 +1,43 @@
-import React from 'react';
-import { Formik, Form, Field } from 'formik';
-import PropTypes from 'prop-types';
-import { SIGN_IN_SCHEMA } from 'utils/validationSchemas';
-import styles from './signInForm.module.scss';
-import Input from 'components/Forms/Input';
-import { INITIAL_VALUES_SIGN_IN } from 'configs';
+import { Formik, Form, Field } from "formik";
+import { SIGN_IN_SCHEMA } from "utils/validation-schemes";
+import { INITIAL_VALUES_SIGN_IN } from "configs";
+import Input from "components/Forms/Input";
+import style from "./signInForm.module.scss";
 
-const SignInForm = props => {
+const SignInForm = () => {
+  const onSubmit = (values, { resetForm }) => {
+    console.log(values);
+    resetForm();
+  };
+
   return (
     <Formik
       initialValues={INITIAL_VALUES_SIGN_IN}
       validationSchema={SIGN_IN_SCHEMA}
-      onSubmit={props.onSubmit}
+      onSubmit={onSubmit}
     >
       <Form>
         <Input
-          name='email'
-          placeholder='Email address'
-          inputClass={styles.inputLogin}
+          name="email"
+          placeholder="Email address"
+          inputClass={style.signInInput}
         />
         <Input
-          name='password'
-          type='password'
-          placeholder='Password'
-          inputClass={styles.inputLogin}
+          name="password"
+          type="password"
+          placeholder="Password"
+          inputClass={style.signInInput}
+          autoComplete="true"
         />
         <Field
-          name='submit'
-          type='submit'
-          value='LOGIN'
-          className={styles.login}
+          name="submit"
+          type="submit"
+          value="Login"
+          className={style.signInBtn}
         />
       </Form>
     </Formik>
   );
-};
-
-SignInForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default SignInForm;
