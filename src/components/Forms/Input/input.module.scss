@@ -22,19 +22,15 @@
 }
 
 .validInput {
-  border-color: green;
+  border-color: #008000;
 }
 
 .invalidInput {
-  border-color: red;
+  border-color: #ff0000;
 }
 
 .error {
   @extend %error;
-}
-
-.error::before {
-  @extend %error::before;
 }
 
 .errorSignIn {

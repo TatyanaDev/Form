@@ -42,7 +42,3 @@
     top: 120px;
   }
 }
-
-.error::before {
-  @extend %error::before;
-}
