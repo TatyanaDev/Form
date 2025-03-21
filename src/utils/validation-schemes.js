@@ -1,22 +1,6 @@
 import * as Yup from "yup";
 
-export const FIRST_SCHEMA = Yup.string()
-  .matches(
-    /^[A-Z][a-z]{1,64}$/,
-    "Please enter a valid name. The first letter must be capitalized"
-  )
-  .label("First name")
-  .required();
-
-export const LAST_SCHEMA = Yup.string()
-  .matches(
-    /^[A-Z][a-z]{1,64}$/,
-    "Please enter a valid last name. The first letter must be capitalized"
-  )
-  .label("Last name")
-  .required();
-
-export const EMAIL_SCHEMA = Yup.string()
+const EMAIL_SCHEMA = Yup.string()
   .email(
     'Enter a valid email. Must start with a lowercase letter, contain @ and "."'
   )
@@ -35,8 +19,20 @@ export const SIGN_IN_SCHEMA = Yup.object({
 });
 
 export const SIGN_UP_SCHEMA = Yup.object({
-  firstName: FIRST_SCHEMA,
-  lastName: LAST_SCHEMA,
+  firstName: Yup.string()
+    .matches(
+      /^[A-Z][a-z]{1,64}$/,
+      "Please enter a valid name. The first letter must be capitalized"
+    )
+    .label("First name")
+    .required(),
+  lastName: Yup.string()
+    .matches(
+      /^[A-Z][a-z]{1,64}$/,
+      "Please enter a valid last name. The first letter must be capitalized"
+    )
+    .label("Last name")
+    .required(),
   displayName: Yup.string()
     .matches(
       /^[A-Z][a-z]{1,64}$/,
